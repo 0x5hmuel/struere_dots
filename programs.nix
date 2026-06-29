@@ -97,6 +97,7 @@ ruff
 	openvpn
 	discord-canary
 	openvpn3
+	emacs
 	];
 
 }
