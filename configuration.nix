@@ -97,16 +97,16 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  # users.users._0x5 = {
-  #   isNormalUser = true;
-  #   description = "0x5hmuel";
-  #   extraGroups = [
-  #     "networkmanager"
-  #     "wheel"
-  #   ];
-  #   packages = with pkgs; [ ];
-  #   shell = pkgs.zsh;
-  # };
+  users.users."0x5" = {
+    isNormalUser = true;
+    description = "0x5hmuel";
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = with pkgs; [ ];
+    shell = pkgs.zsh;
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
