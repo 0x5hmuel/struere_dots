@@ -1,0 +1,102 @@
+{config, pkgs,  ...}:
+
+{
+
+	environment.systemPackages = with pkgs; [
+wget
+  xdg-user-dirs
+curl
+neovim
+lazygit
+lazydocker
+openssh
+git
+firefox
+quodlibet
+docker
+    pkgs.hyprland
+    zsh
+oh-my-zsh
+udiskie
+niri
+kitty
+waybar
+kdePackages.dolphin
+    kdePackages.qtsvg
+    kdePackages.kio-fuse
+    kdePackages.kio-extras
+    spotify
+    obs-studio fastfetch
+    awww
+    obsidian
+    openvpn
+    python3
+    uv
+    nodejs
+    mousepad
+	nerd-fonts.jetbrains-mono
+	ntfs3g
+	ollama
+	zellij
+	quickshell
+	cargo
+zsh-powerlevel10k
+mpv-unwrapped
+dunst
+rofi
+gcc
+zig
+postgresql
+clang
+networkmanagerapplet
+yt-dlp
+pnpm
+github-desktop
+corepack
+pfetch
+kdePackages.kservice
+go
+kdePackages.okular
+redis
+luarocks
+zed-editor
+ruff
+  pyright
+  basedpyright
+  harper
+  prettier
+  prettierd
+  stylua
+  fmt
+  pyright
+  eslint
+  harper
+  home-manager
+  telegram-desktop
+  jetbrains-mono
+  nerd-fonts.jetbrains-mono
+  desktop-file-utils
+  xdg-desktop-portal-hyprland
+  firefoxpwa
+  nerd-fonts.zed-mono
+  gumbo
+  gemini-cli
+  qwen-code
+  htop
+  btop
+  ripgrep
+  iosevka
+	ibm-plex
+	ytui-music
+	# ytmdesktop
+	nitch
+	corepack
+	sddm-astronaut
+	qwen-code
+	networkmanager-openvpn
+	openvpn
+	discord-canary
+	openvpn3
+	];
+
+}
