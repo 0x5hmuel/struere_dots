@@ -23,6 +23,7 @@
         vendorHash = "sha256-lEE99rVSnq8v4BViSknlGivbMgCt2926aaZPng2uFnk=";
         # Note: If it complains about proxyVendor, change vendorHash to proxyVendor above
       }))
+      pkgs.emacs
             ];
           }) # <-- Added a semicolon here to properly end the modules attribute statement
         ];
