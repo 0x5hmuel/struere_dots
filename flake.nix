@@ -18,12 +18,12 @@
           
           # 3. Separated this inline module with a space/new line so it's a distinct list item
           ({ pkgs, ... }: {
-            environment.systemPackages = [
-(surge.packages.${pkgs.system}.default.overrideAttrs (oldAttrs: {
+            environment.systemPackages = with pkgs; [
+(surge.packages.${system}.default.overrideAttrs (oldAttrs: {
         vendorHash = "sha256-lEE99rVSnq8v4BViSknlGivbMgCt2926aaZPng2uFnk=";
         # Note: If it complains about proxyVendor, change vendorHash to proxyVendor above
       }))
-      pkgs.emacs
+      emacs
             ];
           }) # <-- Added a semicolon here to properly end the modules attribute statement
         ];
