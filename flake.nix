@@ -17,8 +17,7 @@
     {
       # 1. Changed 'nixos.lib' to 'nixpkgs.lib'
       nixosConfigurations.struerelabs = nixpkgs.lib.nixosSystem {
-        # 2. You must define the system architecture here
-        system = "x86_64-linux";
+        stdenv.hostPlatform.system = "x86_64-linux";
 
         modules = [
           /etc/nixos/configuration.nix
@@ -33,7 +32,7 @@
               emacs
               nixfmt
             ];
-          }) # <-- Added a semicolon here to properly end the modules attribute statement
+          })
         ];
       };
     };

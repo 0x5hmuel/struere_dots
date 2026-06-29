@@ -4,8 +4,6 @@
 
 { config, pkgs, ... }:
 {
-  # environment.systemPackages = [ sddm-astronaut ];
-
   services.displayManager.sddm = {
     wayland.enable = true;
     enable = true;
@@ -27,8 +25,14 @@
   ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    systemd-boot = {
+      enable = true;
+    };
+    efi = {
+      canTouchEfiVariables = true;
+    };
+  };
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
