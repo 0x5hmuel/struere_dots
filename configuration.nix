@@ -5,7 +5,7 @@
 { config, pkgs, ... }:
 {
   # environment.systemPackages = [ sddm-astronaut ];
-  
+
   services.displayManager.sddm = {
     wayland.enable = true;
     enable = true;
@@ -18,42 +18,42 @@
 
   # nixpkgs.config.allowUnsupportedSystem = true;
 
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./packages.nix
-      ./programs.nix
-      ./services.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    /etc/nixos/hardware-configuration.nix
+    ./packages.nix
+    ./programs.nix
+    ./services.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   services.ollama.enable = true;
 
   # Bluetooth
-    hardware.bluetooth = {
+  hardware.bluetooth = {
     enable = true;
     powerOnBoot = true; # Powers on the controller when the system starts
   };
   programs.openvpn3 = {
-	enable = true;
+    enable = true;
   };
 
-	
   # Enable Blueman system-wide
   services.blueman.enable = true;
 
-
-      # fonts
+  # fonts
   fonts.packages = with pkgs; [
-	nerd-fonts.zed-mono
-	jetbrains-mono
-	iosevka
-	ibm-plex
+    nerd-fonts.zed-mono
+    jetbrains-mono
+    iosevka
+    ibm-plex
   ];
-
 
   networking.hostName = "struerelabs"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -64,12 +64,12 @@
 
   # Enable networking
   networking.networkmanager = {
-  	enable = true;
-	plugins = with pkgs; [
-    		networkmanager-openvpn
-    		networkmanager-l2tp
-    		networkmanager-fortisslvpn
-  	];
+    enable = true;
+    plugins = with pkgs; [
+      networkmanager-openvpn
+      networkmanager-l2tp
+      networkmanager-fortisslvpn
+    ];
   };
 
   # Set your time zone.
@@ -97,13 +97,16 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users._0x5 = {
-    isNormalUser = true;
-    description = "0x5hmuel";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-    shell = pkgs.zsh;
-  };
+  # users.users._0x5 = {
+  #   isNormalUser = true;
+  #   description = "0x5hmuel";
+  #   extraGroups = [
+  #     "networkmanager"
+  #     "wheel"
+  #   ];
+  #   packages = with pkgs; [ ];
+  #   shell = pkgs.zsh;
+  # };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -121,14 +124,14 @@
 
   # List services that you want to enable:
 
-programs.nix-ld.enable = true;
-programs.nix-ld.libraries = with pkgs; [
-  stdenv.cc.cc.lib
-];
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc.lib
+  ];
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
-    security.rtkit.enable = true;
+  security.rtkit.enable = true;
   services.pipewire = {
     enable = true; # if not already enabled
     alsa.enable = true;
@@ -137,7 +140,6 @@ programs.nix-ld.libraries = with pkgs; [
     # If you want to use JACK applications, uncomment the following
     #jack.enable = true;
   };
-
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -148,38 +150,40 @@ programs.nix-ld.libraries = with pkgs; [
   programs.niri.enable = true;
 
   services.postgresql = {
-	enable = true;
-	ensureDatabases = [ "struere_vault" "planmyday" ];
-	ensureUsers = [
-		{
-			name = "0x5";
-			ensureClauses = {
-				createrole = true;
-				createdb = true;
-			};
-		}
-		{
-			name = "root";
-			    # ensureDBOwnership = true;
-		}
-	];
+    enable = true;
+    ensureDatabases = [
+      "struere_vault"
+      "planmyday"
+    ];
+    ensureUsers = [
+      {
+        name = "0x5";
+        ensureClauses = {
+          createrole = true;
+          createdb = true;
+        };
+      }
+      {
+        name = "root";
+        # ensureDBOwnership = true;
+      }
+    ];
   };
 
   programs.git = {
-  	enable = true;
-	config = {
-	  init = {
-		defaultBranch = "main";
-  	};
-	};
+    enable = true;
+    config = {
+      init = {
+        defaultBranch = "main";
+      };
+    };
   };
 
   programs.firefox = {
-	enable = true;
-	  package = pkgs.firefox;
-  nativeMessagingHosts.packages = [ pkgs.firefoxpwa ];
+    enable = true;
+    package = pkgs.firefox;
+    nativeMessagingHosts.packages = [ pkgs.firefoxpwa ];
   };
-
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -188,6 +192,5 @@ programs.nix-ld.libraries = with pkgs; [
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.11"; # Did you read the comment?
-
 
 }

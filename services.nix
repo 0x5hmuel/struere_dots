@@ -1,19 +1,19 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
-services.ollama = {
-	enable = true;
-	loadModels = [
-	"wizard-math:7b"
-	"gemma4"
-	"qwen3-coder"
-	"reader-lm"
-	"deepseek-ocr"
-	];
-	};
-	services.redis.servers."default" = {
-		enable = true;
-		port = 6379;
-	};
-services.flatpak.enable = true;
-	}
+  services.ollama = {
+    enable = true;
+    loadModels = [
+      "wizard-math:7b"
+      "gemma4"
+      "qwen3-coder"
+      "reader-lm"
+      "deepseek-ocr"
+    ];
+  };
+  services.redis.servers."default" = {
+    enable = true;
+    port = 6379;
+  };
+  services.flatpak.enable = true;
+}
