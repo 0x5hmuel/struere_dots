@@ -14,9 +14,12 @@
       stdenv,
       ...
     }:
+    let
+      system = "x86_64-linux";
+    in
     {
       nixosConfigurations.struerelabs = nixpkgs.lib.nixosSystem {
-        stdenv.hostPlatform.system = "x86_64-linux";
+        inherit system;
 
         modules = [
           /etc/nixos/configuration.nix
