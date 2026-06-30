@@ -38,6 +38,7 @@
     "flakes"
   ];
   services.ollama.enable = true;
+  programs.steam.enable = true;
 
   # Bluetooth
   hardware.bluetooth = {

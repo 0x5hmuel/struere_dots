@@ -27,6 +27,7 @@
               }))
               emacs
               nixfmt
+              steam
             ];
           })
         ];
