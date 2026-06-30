@@ -38,7 +38,29 @@
     "flakes"
   ];
   services.ollama.enable = true;
-  programs.steam.enable = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      intel-media-driver # For video acceleration
+      intel-vaapi-driver
+      vulkan-loader
+      vulkan-validation-layers
+    ];
+    extraPackages32 = with pkgs.pkgsi686Linux; [
+      intel-vaapi-driver
+      vulkan-loader
+    ];
+
+  };
+
+  # Ensure Steam is installed via the official NixOS module,
+  # which sets up necessary firewall ports and library paths automatically
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Optional
+    dedicatedServer.openFirewall = true; # Optional
+  };
 
   # Bluetooth
   hardware.bluetooth = {

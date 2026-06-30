@@ -11,7 +11,6 @@
       self,
       nixpkgs,
       surge,
-      stdenv,
       ...
     }:
     let
