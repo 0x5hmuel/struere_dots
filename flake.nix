@@ -18,7 +18,7 @@
     in
     {
       nixosConfigurations.struerelabs = nixpkgs.lib.nixosSystem {
-        inherit system;
+        inherit system; # system = system
 
         modules = [
           /etc/nixos/configuration.nix

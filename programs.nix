@@ -61,17 +61,6 @@
     redis
     luarocks
     zed-editor
-    ruff
-    pyright
-    basedpyright
-    harper
-    prettier
-    prettierd
-    stylua
-    fmt
-    pyright
-    eslint
-    harper
     home-manager
     telegram-desktop
     jetbrains-mono

@@ -22,6 +22,7 @@
     ./packages.nix
     ./programs.nix
     ./services.nix
+    ./programming/lsp.nix
   ];
 
   # Bootloader.
