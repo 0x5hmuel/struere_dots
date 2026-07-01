@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, ... }@args:
 {
   services.displayManager.sddm = {
     wayland.enable = true;
@@ -14,6 +14,8 @@
     theme = "sddm-astronaut-theme";
   };
 
+  # this means I should be able to say something like @args.stdenv?
+
   # nixpkgs.config.allowUnsupportedSystem = true;
 
   imports = [
@@ -22,7 +24,6 @@
     ./packages.nix
     ./programs.nix
     ./services.nix
-    ./programming/lsp.nix
   ];
 
   # Bootloader.
