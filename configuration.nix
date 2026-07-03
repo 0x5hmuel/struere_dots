@@ -215,7 +215,31 @@
     nativeMessagingHosts.packages = [ pkgs.firefoxpwa ];
   };
 
-  programs.zsh.enable = true;
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions = {
+      enable = true;
+    };
+    promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+    shellInit = "nitch";
+    ohMyZsh = {
+      enable = true;
+      plugins = [
+        "z"
+        "python"
+        "man"
+
+      ];
+      customPkgs = [
+        pkgs.nix-zsh-completions
+      ];
+      theme = "agnoster";
+    };
+    syntaxHighlighting = {
+      enable = true;
+    };
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
