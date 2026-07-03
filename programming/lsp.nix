@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-import './nvimPlugins';
+import './nvimPlugins.nix';
   environment.systemPackages = with pkgs; [
     zuban
     stylua
