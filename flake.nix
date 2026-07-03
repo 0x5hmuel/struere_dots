@@ -21,7 +21,7 @@
         inherit system; # system = system
 
         modules = [
-          /etc/nixos/configuration.nix
+          ./configuration.nix
 
           ({ pkgs, ... }: {
             environment.systemPackages = with pkgs; [
@@ -31,7 +31,6 @@
               emacs
               nixfmt
               steam
-              libnotify
             ];
           })
         ];

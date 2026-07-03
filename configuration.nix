@@ -21,7 +21,7 @@
   imports = [
     # Include the results of the hardware scan.
     /etc/nixos/hardware-configuration.nix
-    ./packages.nix
+    # ./packages.nix
     ./programs.nix
     ./services.nix
     ./programming/lsp.nix

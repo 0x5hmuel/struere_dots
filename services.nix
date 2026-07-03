@@ -16,4 +16,5 @@
     port = 6379;
   };
   services.flatpak.enable = true;
+  services.noctalia-shell.enable = true;
 }

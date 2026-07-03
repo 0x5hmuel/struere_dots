@@ -88,5 +88,6 @@
     discord-canary
     openvpn3
     emacs
+    noctalia-shell
   ];
 }
