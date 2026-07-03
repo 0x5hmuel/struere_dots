@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 
 {
-
   environment.systemPackages = with pkgs; [
+    libnotify
     wget
     xdg-user-dirs
     curl
@@ -88,7 +88,5 @@
     discord-canary
     openvpn3
     emacs
-    libnotify
   ];
-
 }
