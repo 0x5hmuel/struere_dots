@@ -31,6 +31,7 @@
               emacs
               nixfmt
               steam
+              libnotify
             ];
           })
         ];
