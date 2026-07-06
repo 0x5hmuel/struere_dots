@@ -15,6 +15,7 @@
       self,
       nixpkgs,
       surge,
+      noctalia,
       ...
     }:
     let
