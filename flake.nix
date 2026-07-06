@@ -45,7 +45,7 @@
               noctalia.packages.${system}.default
               gh
               # caelestia-shell
-              # caelestia-dots.packages.${system}.default
+              caelestia-shell.packages.${system}.default
             ];
           })
         ];
