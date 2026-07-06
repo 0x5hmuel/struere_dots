@@ -8,6 +8,11 @@
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs"; # this line is optional, prevents downloading two versions of nixpkgs but disables cache
     };
+    caelestia-shell = {
+      url = "github:caelestia-dots/shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
@@ -16,6 +21,7 @@
       nixpkgs,
       surge,
       noctalia,
+      caelestia-shell,
       ...
     }:
     let
@@ -37,6 +43,7 @@
               nixfmt
               steam
               noctalia.packages.${system}.default
+              caelestia-shell.packages.${system}.default
             ];
           })
         ];
