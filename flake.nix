@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     surge.url = "github:SurgeDM/Surge/b6329cffb250300b2d1ab49d242ad41d372872f5";
     noctalia = {
-      url = "git+ssh://git@github.com/noctalia-dev/noctalia";
+      url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs"; # this line is optional, prevents downloading two versions of nixpkgs but disables cache
     };
   };
