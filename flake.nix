@@ -43,7 +43,7 @@
               nixfmt
               steam
               noctalia.packages.${system}.default
-              caelestia-shell.packages.${system}.default
+              caelestia-dots.packages.${system}.default
             ];
           })
         ];
