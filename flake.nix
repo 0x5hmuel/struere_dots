@@ -15,7 +15,6 @@
       self,
       nixpkgs,
       surge,
-      noctalia,
       ...
     }:
     let
@@ -36,7 +35,6 @@
               emacs
               nixfmt
               steam
-              noctalia.packages
             ];
           })
         ];
