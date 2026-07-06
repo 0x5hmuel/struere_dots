@@ -35,7 +35,7 @@
               emacs
               nixfmt
               steam
-              inputs.noctalia.packages.${system}.default
+              noctalia.packages
             ];
           })
         ];
