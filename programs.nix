@@ -89,5 +89,6 @@
     openvpn3
     emacs
     noctalia-shell
+    unzip
   ];
 }
