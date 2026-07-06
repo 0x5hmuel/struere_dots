@@ -90,5 +90,7 @@
     emacs
     noctalia-shell
     unzip
+    whatsapp-electron
+    libreoffice
   ];
 }
