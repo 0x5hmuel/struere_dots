@@ -92,5 +92,6 @@
     unzip
     whatsapp-electron
     libreoffice
+    mpvpaper
   ];
 }
