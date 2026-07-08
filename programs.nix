@@ -96,6 +96,9 @@
     upower
     upower-notify
     evtest
+    udisks
+    usermount
+    autofs5
     wayland-bongocat
   ];
 }
