@@ -96,5 +96,6 @@
     upower
     upower-notify
     evtest
+    wayland-bongocat
   ];
 }
