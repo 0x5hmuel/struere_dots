@@ -93,5 +93,7 @@
     whatsapp-electron
     libreoffice
     mpvpaper
+    upower
+    upower-notify
   ];
 }

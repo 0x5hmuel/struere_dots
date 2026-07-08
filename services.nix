@@ -16,4 +16,8 @@
     port = 6379;
   };
   services.flatpak.enable = true;
+  services.upower = {
+    packages = upower;
+    enable = true;
+  };
 }
