@@ -17,7 +17,7 @@
   };
   services.flatpak.enable = true;
   services.upower = {
-    packages = upower;
+    packages = pkgs.upower;
     enable = true;
   };
 }
