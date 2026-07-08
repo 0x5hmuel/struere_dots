@@ -95,5 +95,6 @@
     mpvpaper
     upower
     upower-notify
+    evtest
   ];
 }
