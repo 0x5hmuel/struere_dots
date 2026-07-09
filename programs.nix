@@ -100,5 +100,6 @@
     usermount
     autofs5
     wayland-bongocat
+    peaclock
   ];
 }
