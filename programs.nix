@@ -102,5 +102,6 @@
     wayland-bongocat
     peaclock
     copilot-node-server
+    github-copilot-cli
   ];
 }
