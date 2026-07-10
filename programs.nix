@@ -101,5 +101,6 @@
     autofs5
     wayland-bongocat
     peaclock
+    copilot-node-server
   ];
 }
