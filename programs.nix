@@ -101,6 +101,7 @@
     autofs5
     wayland-bongocat
     peaclock
+    vscode
     copilot-node-server
     github-copilot-cli
   ];
