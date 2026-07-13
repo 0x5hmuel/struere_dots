@@ -12,5 +12,6 @@
     ruff
     prettier
     prettierd
+    basedpyright
   ];
 }
