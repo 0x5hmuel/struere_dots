@@ -5,7 +5,7 @@
     libnotify
     wget
     xdg-user-dirs
-    ark
+    kdePackages.ark
     curl
     neovim
     lazygit
