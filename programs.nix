@@ -5,6 +5,7 @@
     libnotify
     wget
     xdg-user-dirs
+    ark
     curl
     neovim
     lazygit
