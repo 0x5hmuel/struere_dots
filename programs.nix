@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
-
 {
   environment.systemPackages = with pkgs; [
     libnotify
+    sqlite
     wget
     xdg-user-dirs
     kdePackages.ark
