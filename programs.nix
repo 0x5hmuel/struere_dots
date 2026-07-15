@@ -14,6 +14,8 @@
     openssh
     git
     firefox
+    gnumake
+    clang
     quodlibet
     docker
     pkgs.hyprland
