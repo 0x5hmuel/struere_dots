@@ -11,6 +11,7 @@
     neovim
     lazygit
     lazydocker
+    libtool
     openssh
     git
     firefox
