@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     libnotify
+    cmake
     sqlite
     wget
     xdg-user-dirs
