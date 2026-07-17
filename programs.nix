@@ -21,6 +21,7 @@
     firefox
     gnumake
     tldr
+    codex
     clang
     quodlibet
     docker
