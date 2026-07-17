@@ -2,6 +2,8 @@
 {
   environment.systemPackages = with pkgs; [
     libnotify
+    fuse
+    fuse3
     cmake
     sqlite
     wget
