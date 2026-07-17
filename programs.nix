@@ -15,6 +15,8 @@
     lazydocker
     libtool
     openssh
+    fx
+    jless
     git
     firefox
     gnumake
