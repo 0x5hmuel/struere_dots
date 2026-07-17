@@ -20,6 +20,7 @@
     git
     firefox
     gnumake
+    tldr
     clang
     quodlibet
     docker
