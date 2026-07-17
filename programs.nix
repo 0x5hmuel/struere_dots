@@ -109,5 +109,6 @@
     vscode
     copilot-node-server
     github-copilot-cli
+    ungoogled-chromium
   ];
 }
