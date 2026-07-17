@@ -109,6 +109,7 @@
     vscode
     copilot-node-server
     github-copilot-cli
+    appimage-run
     chromium
   ];
 }
