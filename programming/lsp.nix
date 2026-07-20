@@ -3,6 +3,7 @@
 {
   imports = [ ./nvimPlugins.nix ];
   environment.systemPackages = with pkgs; [
+    black
     zuban
     stylua
     fmt
