@@ -28,6 +28,7 @@
     docker
     pkgs.hyprland
     zsh
+    kdePackages.kservice
     oh-my-zsh
     udiskie
     niri
