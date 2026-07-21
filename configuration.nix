@@ -241,8 +241,8 @@
     };
   };
 
-  xdg.mime {
-  	enable = true;
+  xdg.mime = {
+    enable = true;
   };
 
   # This value determines the NixOS release from which the default
