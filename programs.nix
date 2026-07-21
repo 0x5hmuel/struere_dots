@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     libnotify
+    flameshot
     fuse
     fuse3
     cmake
