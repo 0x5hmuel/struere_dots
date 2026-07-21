@@ -9,6 +9,7 @@
     sqlite
     wget
     xdg-user-dirs
+    xdg-utils
     kdePackages.ark
     curl
     neovim
