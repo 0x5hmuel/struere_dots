@@ -120,5 +120,6 @@
     github-copilot-cli
     appimage-run
     chromium
+    hyprshot
   ];
 }
