@@ -10,6 +10,7 @@
     pyright
     harper
     eslint
+    clangd
     ruff
     prettier
     prettierd
