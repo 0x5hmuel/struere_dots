@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     libnotify
+    smartmontools
     redis
     flameshot
     fuse
