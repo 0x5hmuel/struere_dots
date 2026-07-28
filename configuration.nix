@@ -256,4 +256,10 @@
   system.stateVersion = "25.11"; # Did you read the comment?
   programs.appimage.enable = true;
 
+  documentation.dev.enable = true;
+  environment.systemPackages = with pkgs; [
+    man-pages
+    man-pages-posix
+  ];
+
 }
