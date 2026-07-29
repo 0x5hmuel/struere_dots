@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     pulseaudio
+    pdf4qt
     libnotify
     smartmontools
     redis
