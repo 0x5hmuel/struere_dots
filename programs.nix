@@ -28,6 +28,7 @@
     gnumake
     tldr
     codex
+    onlyoffice-desktopeditors
     clang
     quodlibet
     docker
