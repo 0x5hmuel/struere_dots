@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    pulseaudio
     libnotify
     smartmontools
     redis
