@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    socat
+    bubblewrap
     pulseaudio
     pdf4qt
     libnotify
