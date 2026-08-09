@@ -6,6 +6,7 @@
     pulseaudio
     pdf4qt
     libnotify
+    qutebrowser
     smartmontools
     redis
     flameshot
