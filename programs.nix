@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     socat
+    mastodon
     bubblewrap
     pulseaudio
     pdf4qt
