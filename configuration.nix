@@ -28,13 +28,13 @@ in
     ./programs.nix
     ./services.nix
     ./programming/lsp.nix
-    (import "${home-manager}/nixos")
+    # (import "${home-manager}/nixos")
   ];
 
   # Bootloader.
-  home-manager.useUserPackages = true;
-  home-manager.useGlobalPackages = true;
-  home-manager.backupFileExtension = "backup"; # prevent from failing in event of config overwrite
+  # home-manager.useUserPackages = true;
+  # home-manager.useGlobalPackages = true;
+  # home-manager.backupFileExtension = "backup"; # prevent from failing in event of config overwrite
 
   # home-manager.users._0x5 = import ./home.nix;
 
