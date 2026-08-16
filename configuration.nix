@@ -3,9 +3,9 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }@args:
-let
-  home-manager = "https://github.com/nix-community/home-manager/archive/release-26.11.tar.gz";
-in
+# let
+#   home-manager = "https://github.com/nix-community/home-manager/archive/release-26.11.tar.gz";
+# in
 {
   services.displayManager.sddm = {
     wayland.enable = true;
