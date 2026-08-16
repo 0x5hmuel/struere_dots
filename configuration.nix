@@ -36,7 +36,7 @@ in
   home-manager.useGlobalPackages = true;
   home-manager.backupFileExtension = "backup"; # prevent from failing in event of config overwrite
 
-  home-manager.users.0x5 = import ./home.nix:
+  home-manager.users._0x5 = import ./home.nix;
 
   boot.loader = {
     systemd-boot = {
