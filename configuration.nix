@@ -3,6 +3,9 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }@args:
+let
+  home-manager = "https://github.com/nix-community/home-manager/archive/release-26.11.tar.gz";
+in
 {
   services.displayManager.sddm = {
     wayland.enable = true;
@@ -25,9 +28,16 @@
     ./programs.nix
     ./services.nix
     ./programming/lsp.nix
+    # (import "${home-manager}/nixos")
   ];
 
   # Bootloader.
+  home-manager.useUserPackages = true;
+  home-manager.useGlobalPackages = true;
+  home-manager.backupFileExtension = "backup"; # prevent from failing in event of config overwrite
+
+  home-manager.users.0x5 = import ./home.nix:
+
   boot.loader = {
     systemd-boot = {
       enable = true;
