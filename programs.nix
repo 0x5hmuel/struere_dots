@@ -2,9 +2,10 @@
 {
   environment.systemPackages = with pkgs; [
     socat
-    transmission_4
+    transmission_4-gtk
     # logseq
     mastodon
+    postman
     bubblewrap
     pulseaudio
     pdf4qt
