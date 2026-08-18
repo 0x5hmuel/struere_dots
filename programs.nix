@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     socat
+    transmission_4
     logseq
     mastodon
     bubblewrap
