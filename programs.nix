@@ -5,6 +5,7 @@
     transmission_4-gtk
     # logseq
     mastodon
+    websocat
     postman
     bubblewrap
     pulseaudio
