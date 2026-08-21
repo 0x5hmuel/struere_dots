@@ -5,6 +5,7 @@
     transmission_4-gtk
     # logseq
     mastodon
+    pinta
     websocat
     postman
     bubblewrap
