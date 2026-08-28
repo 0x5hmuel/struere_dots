@@ -5,6 +5,7 @@
     transmission_4-gtk
     # logseq
     mastodon
+    localsend
     pinta
     websocat
     postman
