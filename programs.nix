@@ -5,6 +5,8 @@
     transmission_4-gtk
     # logseq
     mastodon
+    graphviz
+    bottles
     localsend
     pinta
     websocat
