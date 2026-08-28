@@ -20,7 +20,6 @@
   services.udev.extraRules = ''
     KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666", TAG+="uaccess"
   '';
-  ];
 
   # this means I should be able to say something like @args.stdenv?
 
