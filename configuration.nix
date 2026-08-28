@@ -17,6 +17,11 @@
     theme = "sddm-astronaut-theme";
   };
 
+  services.udev.extraRules = ''
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666", TAG+="uaccess"
+  '';
+  ];
+
   # this means I should be able to say something like @args.stdenv?
 
   # nixpkgs.config.allowUnsupportedSystem = true;
@@ -143,6 +148,8 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "input"
+      "plugdev"
     ];
     packages = with pkgs; [ ];
     shell = pkgs.zsh;
