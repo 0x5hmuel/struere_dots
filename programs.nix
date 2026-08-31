@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     socat
     transmission_4-gtk
+    tree-sitter
     rhythmbox
     logseq
     mastodon
