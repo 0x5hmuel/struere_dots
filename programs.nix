@@ -4,6 +4,7 @@
     socat
     transmission_4-gtk
     gumbo
+    luarocks
     tree-sitter
     rhythmbox
     logseq
