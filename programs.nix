@@ -3,7 +3,8 @@
   environment.systemPackages = with pkgs; [
     socat
     transmission_4-gtk
-    # logseq
+    rhythmbox
+    logseq
     mastodon
     graphviz
     bottles

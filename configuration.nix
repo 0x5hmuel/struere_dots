@@ -71,6 +71,10 @@
 
   };
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-39.8.10"
+  ];
+
   # Ensure Steam is installed via the official NixOS module,
   # which sets up necessary firewall ports and library paths automatically
   programs.steam = {
