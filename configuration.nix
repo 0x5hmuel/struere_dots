@@ -7,7 +7,10 @@
 #   home-manager = "https://github.com/nix-community/home-manager/archive/release-26.11.tar.gz";
 # in
 {
-  services.rabbitmq.package = pkgs.rabbitmq-server;
+  services.rabbitmq = {
+    enable = true;
+    # package = pkgs.rabbitmq-server;
+  };
 
   services.displayManager.sddm = {
     wayland.enable = true;
