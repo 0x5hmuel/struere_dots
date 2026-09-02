@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     socat
     transmission_4-gtk
+    rabbitmq-server
     gumbo
     luarocks
     tree-sitter
