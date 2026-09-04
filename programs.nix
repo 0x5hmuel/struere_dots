@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    typora
     socat
     transmission_4-gtk
     rabbitmq-server
