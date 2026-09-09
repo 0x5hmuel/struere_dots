@@ -8,6 +8,10 @@
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs"; # this line is optional, prevents downloading two versions of nixpkgs but disables cache
     };
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # caelestia-shell = {
     #   url = "github:caelestia-dots/shell";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -44,6 +48,7 @@
               steam
               noctalia.packages.${system}.default
               gh
+              zen-browser.packages.${system}.default
               # caelestia-shell
               # caelestia-shell.packages.${system}.default
             ];

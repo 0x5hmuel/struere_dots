@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     typora
+    brave
     socat
     transmission_4-gtk
     rabbitmq-server
