@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     typora
+    gnupg
     brave
     socat
     transmission_4-gtk

@@ -25,6 +25,7 @@
       nixpkgs,
       surge,
       noctalia,
+      zen-browser,
       # caelestia-shell,
       ...
     }:
@@ -48,7 +49,7 @@
               steam
               noctalia.packages.${system}.default
               gh
-              inputs.zen-browser.packages.${system}.default
+              zen-browser.packages.${system}.default
               # caelestia-shell
               # caelestia-shell.packages.${system}.default
             ];

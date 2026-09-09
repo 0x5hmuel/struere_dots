@@ -22,6 +22,12 @@
     theme = "sddm-astronaut-theme";
   };
 
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-curses; # Use pinentry-qt or pinentry-mac if on a desktop
+    enableSSHSupport = true;
+  };
+
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
