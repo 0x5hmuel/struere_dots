@@ -48,7 +48,7 @@
               steam
               noctalia.packages.${system}.default
               gh
-              zen-browser.packages.${system}.default
+              inputs.zen-browser.packages.${system}.default
               # caelestia-shell
               # caelestia-shell.packages.${system}.default
             ];
