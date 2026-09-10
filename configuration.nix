@@ -22,9 +22,14 @@
     theme = "sddm-astronaut-theme";
   };
 
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+
   programs.gnupg.agent = {
     enable = true;
-    pinentryPackage = pkgs.pinentry-curses; # Use pinentry-qt or pinentry-mac if on a desktop
+    pinentryPackage = pkgs.pinentry-curses;
     enableSSHSupport = true;
   };
 
