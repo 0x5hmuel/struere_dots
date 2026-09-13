@@ -12,6 +12,10 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # caelestia-shell = {
     #   url = "github:caelestia-dots/shell";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -23,6 +27,7 @@
     {
       self,
       nixpkgs,
+      nur,
       surge,
       noctalia,
       zen-browser,
@@ -51,7 +56,7 @@
               gh
               zen-browser.packages.${system}.default
               # caelestia-shell
-              # caelestia-shell.packages.${system}.default
+              config.nur.repos.iuricarras.truckersmp-cli # caelestia-shell.packages.${system}.default
             ];
           })
         ];
