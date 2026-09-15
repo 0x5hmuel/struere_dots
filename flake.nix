@@ -44,6 +44,18 @@
         modules = [
           ./configuration.nix
 
+          {
+            # Overlay NUR into your standard pkgs structure
+            nixpkgs.overlays = [
+              (final: prev: {
+                nur = import nur {
+                  nurpkgs = prev;
+                  pkgs = prev;
+                };
+              })
+            ];
+          }
+
           ({ pkgs, ... }: {
             environment.systemPackages = with pkgs; [
               (surge.packages.${system}.default.overrideAttrs (oldAttrs: {
@@ -55,8 +67,10 @@
               noctalia.packages.${system}.default
               gh
               zen-browser.packages.${system}.default
+              pkgs.nur.repos.iuricarras.truckersmp-cli
               # caelestia-shell
-              config.nur.repos.iuricarras.truckersmp-cli # caelestia-shell.packages.${system}.default
+              # caelestia-shell.packages.${system}.default
+
             ];
           })
         ];

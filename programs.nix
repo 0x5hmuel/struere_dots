@@ -1,6 +1,27 @@
 { config, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    pkgsi686Linux.freetype
+    libglvnd
+
+    freetype
+    fontconfig
+    libGL
+    libGLU
+    libdrm
+    libx11
+    libxext
+    libxfixes
+    libxi
+    libxrandr
+    libxcb
+    libxinerama
+    libxcursor
+    libxxf86vm
+    zlib
+
+    mesa
+    steam-run
     typora
     gnupg
     brave
