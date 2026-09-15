@@ -103,6 +103,7 @@
     enable = true;
     remotePlay.openFirewall = true; # Optional
     dedicatedServer.openFirewall = true; # Optional
+    gamescopeSession.enable = true;
   };
 
   # Bluetooth
