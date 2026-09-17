@@ -12,6 +12,37 @@
     # package = pkgs.rabbitmq-server;
   };
 
+  boot.kernelModules = [ "kvm-intel" ]; # or kvm-amd
+  boot.extraModprobeConfig = ''
+    options kvm_intel nested=1
+  '';
+
+  boot.kernelParams = [
+    "intel_iommu=on" # Change to "amd_iommu=on" if using an AMD CPU
+    "iommu=pt"
+    "vfio-pci.ids=XXXX:YYYY,AAAA:BBBB" # Replace with your GPU & Audio IDs
+  ];
+
+  # 2. Ensure VFIO modules load in early boot
+  boot.initrd.kernelModules = [
+    "vfio_pci"
+    "vfio"
+    "vfio_iommu_type1"
+  ];
+
+  # 3. Enable Libvirt and QEMU OVMF (UEFI)
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      package = pkgs.qemu_kvm;
+      runAsRoot = true;
+      # ovmf = {
+      #   enable = true;
+      #   packages = [ pkgs.OVMFFull.fd ];
+      # };
+    };
+  };
+
   services.displayManager.sddm = {
     wayland.enable = true;
     enable = true;
@@ -54,6 +85,7 @@
     ./programs.nix
     ./services.nix
     ./programming/lsp.nix
+    ./timers.nix
     # (import "${home-manager}/nixos")
   ];
 

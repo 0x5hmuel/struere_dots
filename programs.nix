@@ -20,6 +20,12 @@
     libxxf86vm
     zlib
 
+    maple-mono.truetype
+    # Maple Mono NF (Ligature unhinted)
+    maple-mono.NF-unhinted
+    # Maple Mono NF CN (Ligature unhinted)
+    maple-mono.NF-CN-unhinted
+
     mesa
     steam-run
     typora
