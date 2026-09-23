@@ -156,6 +156,11 @@
     jetbrains-mono
     iosevka
     ibm-plex
+    maple-mono.truetype
+    # Maple Mono NF (Ligature unhinted)
+    maple-mono.NF-unhinted
+    # Maple Mono NF CN (Ligature unhinted)
+    maple-mono.NF-CN-unhinted
   ];
 
   networking.hostName = "struerelabs"; # Define your hostname.
